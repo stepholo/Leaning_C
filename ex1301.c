@@ -6,6 +6,11 @@
 
 int* random_number();
 
+/*
+ * Function to sort an array in ascending order
+ * and in descending order using bubble sort 
+ * data structure
+*/
 
 int main(){
 
@@ -13,7 +18,7 @@ int main(){
     int x, outer, inner, temp;
 
     /* Display the array */
-    puts("The original array with random numbers of range 1 - 40");
+    puts("The original array with random numbers of range 1 - 100");
     for (x=0; x<SIZE; x++){
         printf("%d\t", numbers[x]);
     }
@@ -28,7 +33,7 @@ int main(){
                 numbers[inner] = temp;
             }
         }
-    }
+    } 
 
     /* Display the sorted array */
     puts("Array sorted in Ascending order");
@@ -54,7 +59,8 @@ int main(){
         printf("%d\t", numbers[x]);
     }
     putchar('\n');
-    
+
+    return 0;
 }
 
 int* random_number(){
@@ -62,12 +68,21 @@ int* random_number(){
     srand((unsigned)(time(NULL)));
 
     static int arr[SIZE];
-    int x, r;
+    int x, r, y, duplicate;
 
     /* Generate random value and populate the array */
     for (x=0; x<SIZE; x++){
+        do {
+            r = (rand() % 100) + 1;
+            duplicate = 0;
 
-        r = (rand() % 100) + 1;
+            for (y=0; y<x; y++){
+                if (r == arr[y]){
+                    duplicate = 1;
+                    break;
+                }
+            }
+        } while (duplicate);
 
         arr[x] = r;
     }
