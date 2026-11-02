@@ -5,6 +5,7 @@
 #define SIZE 40
 
 int* random_number();
+int sort_text();
 
 /*
  * Function to sort an array in ascending order
@@ -60,8 +61,15 @@ int main(){
     }
     putchar('\n');
 
+    sort_text();
+
     return 0;
 }
+
+/*Function that selects random numbers
+ *In the range of 1 - 100
+ *do-while loop used to ensure that no number is repeated
+ */
 
 int* random_number(){
 
@@ -88,4 +96,36 @@ int* random_number(){
     }
 
     return arr;
+}
+
+/*
+ *A function that sorts character array
+ *The array is 21 characters
+ */
+
+int sort_text(){
+
+    char sentence[] = "C Programming is fun!";
+
+    int temp, x, index = 0;
+
+    while (sentence[index] != '\0'){
+
+        for (x=index+1; x<21; x++){
+            if (sentence[index] > sentence[x]){
+                temp = sentence[index];
+                sentence[index] = sentence[x];
+                sentence[x] = temp;
+            }
+        }
+        index++;
+    }
+
+    for (x=0; x<21; x++){
+        printf("%c", sentence[x]);
+    }
+    putchar('\n');
+
+    return 0;
+
 }
