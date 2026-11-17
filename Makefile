@@ -3,10 +3,10 @@ CC = gcc
 CFLAGS = -Wall -Wextra -O2 -g
 
 # Target executable name
-TARGET = ex1401
+TARGET = ex14101b
 
 # List your source files
-SRCS = ex1401.c
+SRCS = ex14101b.c
 
 # Generate object file names from source files
 OBJS = $(SRCS:.c=.o)
