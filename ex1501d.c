@@ -5,8 +5,14 @@
 
 int return_first_stream(void);
 
+/*
+ * Main program:
+ * Demonstrates floating-point and string formatting, text statistics,
+ * string alignment, stream input, and returning the first character.
+ */
 int main(){
 
+    /* Variables for formatting demonstrations and character counts. */
     float sample1 = 34.5;
     float sample2 = 12.3456789;
     char hello[] = "hello";
@@ -23,6 +29,7 @@ int main(){
 
     alpha = punct = blank = index = 0;
 
+    /* Demonstrate floating-point formatting. */
     puts("Floating point conversion");
     printf("%%6.1f = %6.1f\n", sample1);
     printf("%%5.1f = %5.1f\n", sample2);
@@ -39,6 +46,7 @@ int main(){
     printf("%%5s = %5s\n", hello);
 
     puts("\nInteger conversion");
+    /* Count alphabetic, blank, and punctuation characters. */
     while (phrase[index] != '\0'){
         if (isalpha(phrase[index])){
             alpha++;
@@ -66,6 +74,7 @@ int main(){
     printf("%-4s me\n", "meet");
 
     puts("\nPresidents alignment");
+    /* Print each president name while demonstrating field alignment. */
     for (x=0; x<SIZE; x++){
         y = 0;
         while (presidents[x][y] != '\0'){
@@ -92,6 +101,7 @@ int main(){
         }
 
     puts("\nUsing stream inputs");
+    /* Read characters until a period is entered. */
     do {
         i = getchar();
         putchar(i);
@@ -116,6 +126,7 @@ int main(){
 int return_first_stream(void){
     int first, input;
 
+    /* Skip newline characters before reading the first character. */
     do {
         first = getchar();
     } while (first == '\n');
@@ -124,6 +135,7 @@ int return_first_stream(void){
         return EOF;
     }
 
+    /* Discard all remaining characters in the input line. */
     while ((input = getchar()) != '\n' && input != EOF) {
     }
 
