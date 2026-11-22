@@ -1,11 +1,17 @@
 #include <stdio.h>
 
+/*
+ * Main program:
+ * Creates a three-dimensional tic-tac-toe board, initializes it with dots,
+ * places an X in the center, and displays each level.
+ */
 int main(){
 
+    /* Create storage for all values on three 3-by-3 levels. */
     char tictactoe[3][3][3];
     int x, y, z;
 
-    /* Initialize the matrix */
+    /* Initialize every board position with a dot. */
     for (x=0; x<3; x++){
 
         for (y=0; y<3; y++){
@@ -17,7 +23,7 @@ int main(){
     }
     tictactoe[1][1][1] = 'X';
 
-    /* Display Game Board */
+    /* Display each level of the game board. */
     puts("Ready to play 3D Tic-Tac-Toe?");
     for (z=0; z<3; z++){
 
