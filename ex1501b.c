@@ -3,6 +3,11 @@
 
 void change_case(char phrase[]);
 
+/*
+ * Main program:
+ * Reads an answer, converts its first character to uppercase, responds
+ * based on the answer, and toggles the letter case of the complete word.
+ */
 int main(){
 
     char ans1;
@@ -38,8 +43,10 @@ void change_case(char phrase[]){
 
     int i, x;
 
+    /* Start at the first character. */
     i = 0;
     while (phrase[i] != '\0'){
+        /* Toggle alphabetic characters to the opposite letter case. */
         if (isascii(phrase[i])){
             if (isalpha(phrase[i])){
                 if (islower(phrase[i])){
@@ -53,6 +60,7 @@ void change_case(char phrase[]){
         i++;
     }
 
+    /* Print the entire modified phrase. */
     for (x=0; x<i; x++){
         printf("%c", phrase[x]);
     }
