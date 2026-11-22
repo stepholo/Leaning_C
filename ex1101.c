@@ -6,6 +6,10 @@ void limit(int stop);
 int verify();
 int random_number();
 
+/*
+ * Main program:
+ * Starts the limit and random-number game logic.
+ */
 int main(){
     
     int s;
@@ -18,6 +22,7 @@ void limit(int stop){
 
     int x, n, m;
 
+    /* Ask for a value and determine which game branch should run. */
     n = verify();
 
     if (n == 1){
@@ -46,6 +51,7 @@ int verify(){
 
     int s;
 
+    /* Read the stopping value and report whether it exceeds 100. */
     printf("Enter a stopping value (0 - 100): ");
     scanf("%d", &s);
     if (s > 100){
@@ -58,6 +64,7 @@ int verify(){
 
 int random_number(){
 
+    /* Seed the random generator before choosing a value. */
     srand(time(NULL));
 
     int min = 101;
