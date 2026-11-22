@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 
 void sub(void){
 
-    /* Ask the user to press Enter before listing the working directory. */
+    /* Ask, the user to press Enter before listing the working directory. */
     printf("Type 'ls' to list all items working direction :");
     getchar();
     /* Run the operating-system listing command. */
