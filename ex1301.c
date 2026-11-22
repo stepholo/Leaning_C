@@ -13,8 +13,14 @@ int sort_text();
  * data structure
 */
 
+/*
+ * Main program:
+ * Generates 40 unique random numbers, sorts them in ascending and descending
+ * order, and sorts a character string alphabetically.
+ */
 int main(){
 
+    /* Generate and return an array of 40 unique random numbers. */
     int *numbers = random_number();
     int x, outer, inner, temp;
 
