@@ -1,7 +1,13 @@
 #include <stdio.h>
 
+/*
+ * Main program:
+ * Demonstrates a character choice example and then finds the larger of two
+ * integers entered by the user.
+ */
 int main(){
 
+    /* The original letter-selection switch examples are commented out. */
     /*int letter;
 
     printf("Enter the choice of your letter here (a - c): ");
@@ -49,6 +55,7 @@ int main(){
 
     int a, b, larger;
 
+    /* Read two values and select the larger value with a ternary expression. */
     printf("Enter value A: ");
     scanf("%d", &a);
     printf("Enter another value B: ");
