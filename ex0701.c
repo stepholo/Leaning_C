@@ -7,7 +7,6 @@
 int main(){
 
     /* Buffers for a first name and a full name. */
-    char firstname[7];
     char fullname[15];
 
     /*printf("What is your firstname: ");
