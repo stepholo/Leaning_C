@@ -8,7 +8,7 @@
 int main(){
 
     /* The original letter-selection switch examples are commented out. */
-    /*int letter;
+    int letter;
 
     printf("Enter the choice of your letter here (a - c): ");
     letter = getc(stdin);
@@ -51,7 +51,7 @@ int main(){
 
     else {
         puts("Thats the default required letter");
-    }*/
+    }
 
     int a, b, larger;
 
@@ -63,6 +63,6 @@ int main(){
 
     larger = a > b ? a : b;
     printf("%d is largest value\n", larger);
-    
+
     return 0;
 }
