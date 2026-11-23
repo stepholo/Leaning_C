@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -11,9 +11,9 @@ int random_number();
  * Starts the limit and random-number game logic.
  */
 int main(){
-    
+
     int s;
-    
+
     limit(s);
     return 0;
 }
@@ -34,17 +34,17 @@ void limit(int stop){
                 }
             }
         }
-    
+
     else if (n == 0){
 
         m = random_number();
         printf("Random number - %d", m);
-        
+
         if (x == m){
             puts("I won!");
         }
     }
-    
+
 }
 
 int verify(){
